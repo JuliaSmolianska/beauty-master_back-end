@@ -1,8 +1,7 @@
 import User from "../models/User.js";
 import "dotenv/config";
-import fs from "fs/promises";
 import { ctrlWrapper } from "../decorators/index.js";
-import { HttpError, sendEmail, cloudinary } from "../helpers/index.js";
+import { HttpError, sendEmail } from "../helpers/index.js";
 import bcrypt from "bcryptjs";
 import generator from 'generate-password';
 
@@ -11,7 +10,6 @@ const generatePassword = generator.generate({
   numbers: true
 });
 
-const { BASE_URL } = process.env;
 
 const currentUser = async (req, res) => {
   const { _id } = req.user;
