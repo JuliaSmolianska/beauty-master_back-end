@@ -60,7 +60,7 @@ const changePassword = async (req, res) => {
 const forgotPasswordEmail = (email, generatePassword) => ({
   to: email,
   subject: "Ваш новий пароль",
-  html: `<p>${generatePassword}</p><br/><a target="_blank" href="https://localhost:3000/singin"><button>Go to Singin page</button></a>`
+  html: `<p>${generatePassword}</p><br/><a target="_blank" href="https://incomparable-bonbon-5cfefe.netlify.app/login"><button>Перейти на сторінку входу</button></a>`
 });
 
 const forgotPassword = async (req, res, next) => {
