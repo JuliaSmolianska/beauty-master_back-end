@@ -6,7 +6,7 @@ import { userUpdateSchema } from "../../models/User.js";
 
 const userRouter = express.Router();
 
-userRouter.get("/:userId", authenticate, validateBody(userUpdateSchema), userController.currentUser);
+userRouter.get("/current", authenticate, validateBody(userUpdateSchema), userController.currentUser);
 
 userRouter.patch("/:userId", authenticate, isEmptyBody, validateBody(userUpdateSchema), userController.updateUser);
 
